@@ -7,7 +7,7 @@ import Toggle from './Toggle'
 const Navbar = () =>{
     return(
         <nav className="navbar navbar-expand-lg navbar_home justify-content-between">
-            <Link className="navbar-brand col-5" to="/"><img src={logo} alt="logo" style={{width: '150px'}} /></Link>
+            <Link className="navbar-brand col-5" to="/"><img src={logo} alt="logo" style={{width: '150px', maxWidth: '100%'}} /></Link>
             <Collapse/>
             <Toggle />
         </nav>

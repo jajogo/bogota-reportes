@@ -11,13 +11,13 @@ const Toggle = () =>{
                     <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/">Quienes Somos</Link>
+                    <Link className="nav-link" to="/about">Quienes Somos</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/explorar">Explorar</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/">Contact</Link>
+                    <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
                 
             </ul>

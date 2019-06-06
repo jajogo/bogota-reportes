@@ -16,10 +16,10 @@ function Footer() {
                                 <li><Link to="/"> recursos</Link></li>
                             </ul>
                         </div>
-                        <div className="col-md-4 col-sm-12">
+                        <div className="col-md-4 col-sm-12 directions">
                             <p>Dirección calle 26# 30-46 oficina No. 35</p>
                             <p>Telefono: 216 878 5634 - 345 3456</p>
-                            <p>Correo: reportatumismo@transmilenio.com.co</p>
+                            <p>Correo: reportatumismo@ transmilenio.com.co</p>
                         </div>
                         <div className="col-md-4 col-sm-12">
                             <p>Siguenos en nuestras redes</p>

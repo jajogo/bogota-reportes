@@ -6,6 +6,9 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp';
 import Footer from './components/layout/Footer';
 import Explorar from './components/Explorar/Explorar';
+import CreateReport from './components/reportes/CreateReport';
+import contact from './components/layout/contact';
+import about from './components/layout/about';
 
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Route path="/signin" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
           <Route path="/explorar" component={Explorar}/>
+          <Route path="/create" component={CreateReport}/>
+          <Route path="/contact" component={contact}/>
+          <Route path="/about" component={about}/>
         </Switch>
         <Footer/>
       </div>

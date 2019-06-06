@@ -193,10 +193,14 @@ body,html{
   display: flex;
   flex-direction: column;
 }
-.section5 form .content_foto{
+form .content_foto{
+  width: 100%;
   background-color: #fff0f1;
   text-align: center;
   padding: 20px 0;
+}
+form .content_foto img{
+  width: 100%;
 }
 .section5 form .foto{
   width: 250px;
@@ -263,7 +267,9 @@ footer .fondo .redes a,
   background-color: #6f6f6f;
   border-top: 5px solid white;
 }
-
+.footer .directions p{
+  max-width: 100%;
+}
 .section_exp1{
   background: #FFF8ED;
   color: #000;
