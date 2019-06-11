@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function contact() {
     return (
@@ -11,13 +12,13 @@ function contact() {
                         <div className="mas_t">
                             <p>O unete en nuestras redes:</p>
                             <ul>
-                                <li><a href="#"><i className="fab fa-facebook-f"></i></a>
+                                <li><Link to="/"><i className="fab fa-facebook-f"></i></Link>
                                 </li>
-                                <li><a href="#"><i className="fab fa-twitter"></i></a>
+                                <li><Link to="/"><i className="fab fa-twitter"></i></Link>
                                 </li>
-                                <li><a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                <li><Link to="/"><i className="fab fa-linkedin-in"></i></Link>
                                 </li>
-                                <li><a href="#"><i className="fab fa-instagram"></i></a>
+                                <li><Link to="/"><i className="fab fa-instagram"></i></Link>
                                 </li>
                             </ul>
                         </div>

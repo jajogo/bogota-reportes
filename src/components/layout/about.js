@@ -26,7 +26,6 @@ class about extends React.Component {
                 <img src={require('../../img/scroll/Sol contamos con tigo.png')} data-_hw6="bottom:-100%;" data-_hw8="bottom:0%;" className="nubes"/>
                 <a to="/" className="volver_home" data-_hw8="top:100%;" data-_hw9="top:40%;">Volver Al Home</a>
             </section>
-
         </ParallaxProvider>
         )
     }

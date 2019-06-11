@@ -48,7 +48,7 @@ class Section5 extends Component {
                                 <input type="date" id="date" placeholder="" onChange={this.handleChange}/>
                                 <input type="file" onChange={this.onImageChange} className="filetype" id="image"/>
                                 <div className="content_foto">
-                                    <img id="target" className="foto" src={this.state.image}/>
+                                    <img id="target" className="foto" src={this.state.image} alt="tu foto"/>
                                 </div>
                                 <textarea id="content" placeholder="Comenta tu publicación" onChange={this.handleChange}></textarea>
                                 <input type="submit" value="¡Reportar!" />

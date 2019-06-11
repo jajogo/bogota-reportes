@@ -26,8 +26,8 @@ class Section3 extends Component {
                             </div>
                             <div className="content col-md-6 col-sm-12">
                                 <form onSubmit={this.handleSubmit}>
-                                    <input type="text" id="usuario" placeholder="Usuario" onChange={this.handleChange} />
-                                    <input type="password" id="password" placeholder="Contraseña" onChange={this.handleChange} />
+                                    <input type="text" id="usuario2" placeholder="Usuario" onChange={this.handleChange} />
+                                    <input type="password" id="password2" placeholder="Contraseña" onChange={this.handleChange} />
                                     <input type="submit" value="Ingresar" />
                                 </form>
                             </div>

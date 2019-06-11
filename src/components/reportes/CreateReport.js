@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createReport } from '../../store/actions/projectActions'
+import { Redirect } from 'react-router-dom'
 
 class CreateReport extends Component {
     state = {
@@ -15,6 +18,7 @@ class CreateReport extends Component {
     }
     handleSubmit = (e) =>{
         e.preventDefault();
+        this.props.createReport(this.state)
     }
     onImageChange = (event) => {
         if (event.target.files && event.target.files[0]) {
@@ -26,6 +30,8 @@ class CreateReport extends Component {
         }
       }
     render() {
+        const { auth } = this.props;
+        if(!auth.uid) return <Redirect to= '/signin'/>
         return (
             <div className="container" style={{padding: '20px 0'}}>
                 <form onSubmit={this.handleSubmit} className="formReport">
@@ -37,10 +43,10 @@ class CreateReport extends Component {
                     <div className="form-group">
                         <label htmlFor="selection">Tipo de reporte</label>
                         <select onChange={this.handleChange} id="selection" className="form-control">
-                            <option value="Daños">Daños a Estaciones</option>
-                            <option value="Objetos">Objetos perdidos</option>
-                            <option value="Reporte">Reporte de incidentes</option>
-                            <option value="Eventualidades">Eventualidades</option>
+                            <option value="Daños a Estaciones">Daños a Estaciones</option>
+                            <option value="Objetos perdidos">Objetos perdidos</option>
+                            <option value="Reporte de incidentes">Reporte de incidentes</option>
+                            <option value="Eventualidades Eventualidades">Eventualidades</option>
                         </select>
                     </div>
                     <div className="form-group">
@@ -49,9 +55,9 @@ class CreateReport extends Component {
                     </div>
                     <div className="form-group" style={{overflow: 'hidden'}}>
                         <label htmlFor="image">Tu foto</label> <br/>
-                        <input type="file" className="form-control-file" placeholder="foto" onChange={this.onImageChange} className="filetype" id="image" />
+                        <input type="file" className="form-control-file filetype" placeholder="foto" onChange={this.onImageChange} id="image" />
                         <div className="content_foto">
-                            <img id="target" className="foto" src={this.state.image} />
+                            <img id="target" className="foto" src={this.state.image} alt="tu foto" />
                         </div>
                     </div>
                     <div className="form-group">
@@ -65,4 +71,16 @@ class CreateReport extends Component {
     }
 }
 
-export default CreateReport
+const mapStateToProps = (state) =>{
+    return{
+        auth: state.firebase.auth
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        createReport: (project1) => dispatch(createReport(project1))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CreateReport)
